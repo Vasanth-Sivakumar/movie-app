@@ -27,7 +27,7 @@ function App() {
   return (
       <div class="container">
         <div className="container my-4 py-4">
-          <Header searchValue={searchValue} setSearchValue={setSearchValue} />
+          <Header searchVal={searchValue} setSearchVal={setSearchValue} />
         </div>
         <Routes>
           <Route path="/" element={<MovieList movies={movies} />} />
