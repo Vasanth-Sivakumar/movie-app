@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function MovieList(props) {
   return (
     <div className="row justify-content-center">
-      {props.movies.map((movie, index) => (
+      {props.movies && props.movies.map((movie, index) => (
         <div className="col-md-3 mb-4">
           <div className="custom-card text-center" key={movie.imdbID}>
             <Link type="button" to={`/${movie.imdbID}`}>
