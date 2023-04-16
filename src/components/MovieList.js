@@ -2,10 +2,10 @@ import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
 
-function MovieList({movies}) {
+function MovieList(props) {
   return (
     <div className="row justify-content-center">
-      {movies.map((movie, index) => (
+      {props.movies.map((movie, index) => (
         <div className="col-md-3 mb-4" key={movie.imdbID}>
           <div className="custom-card text-center" >
             <Link type="button" to={`/${movie.imdbID}`}>

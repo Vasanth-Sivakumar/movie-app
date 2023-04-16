@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const getMovieRequest = async () => {
-      const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=b0f40852`;
+      const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=b0f40852`;
       const response = await fetch(url);
       const responseJson = await response.json();
       if (responseJson.Search) {
@@ -27,7 +27,7 @@ function App() {
   return (
       <div class="container">
         <div className="container my-4 py-4">
-          <Header searchVal={searchValue} setSearchVal={setSearchValue} />
+          <Header searchValue={searchValue} setSearchValue={setSearchValue} />
         </div>
         <Routes>
           <Route path="/" element={<MovieList movies={movies} />} />
