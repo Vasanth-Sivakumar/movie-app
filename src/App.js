@@ -3,7 +3,7 @@ import "./App.css";
 import MovieList from "./components/MovieList";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Movie from "./components/Movie";
 import Header from "./components/Header";
 
@@ -27,7 +27,6 @@ function App() {
   }, [searchValue]);
 
   return (
-    <BrowserRouter>
       <div class="container">
         <div className="container my-4 py-4">
           <Header searchValue={searchValue} setSearchValue={setSearchValue} />
@@ -37,7 +36,6 @@ function App() {
           <Route path="/:id" element={<Movie />} />
         </Routes>
       </div>
-    </BrowserRouter>
   );
 }
 
