@@ -31,7 +31,6 @@ function App() {
         <div className="container my-4 py-4">
           <Header searchValue={searchValue} setSearchValue={setSearchValue} />
         </div>
-        <MovieList movies={movies} />
         <Routes>
           <Route path="/" element={<MovieList movies={movies} />} />
           <Route path="/:id" element={<Movie />} />
