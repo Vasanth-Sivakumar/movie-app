@@ -8,9 +8,11 @@ import Movie from "./components/Movie";
 import Header from "./components/Header";
 
 function App() {
+  // State for movies data and search value
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
 
+  // Fetch movie data from OMDB API based on search value
   useEffect(() => {
     const getMovieRequest = async () => {
       const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=b0f40852`;
@@ -25,9 +27,10 @@ function App() {
   
 
   return (
-      <div class="container">
+      <div className="container">
         <div className="container my-4 py-4">
-          <Header searchValue={searchValue} setSearchValue={setSearchValue} />
+          <Header searchValue={searchValue} setSearchValue={setSearchValue} 
+          data-testid="header"/>
         </div>
         <Routes>
           <Route path="/" element={<MovieList movies={movies} />} />

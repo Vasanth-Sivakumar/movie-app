@@ -12,7 +12,7 @@ const Header = ({ searchValue, setSearchValue }) => {
           Movies
         </Link>
         <input
-          className="col col-sm-4"
+          className="col col-sm-3 search"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           placeholder="Type to search..."

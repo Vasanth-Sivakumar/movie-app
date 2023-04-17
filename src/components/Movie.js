@@ -2,9 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
 function Movie() {
+  // Get movie ID from URL parameters
   const { id } = useParams();
+
+  // State for movie data
   const [movie, setMovie] = useState([]);
 
+  // Fetch movie data from OMDB API based on movie ID
   useEffect(() => {
     const getMovieRequest = async () => {
       const url = `https://www.omdbapi.com/?i=${id}&apikey=b0f40852`;
